@@ -9,5 +9,5 @@ import (
 func main() {
 	depths := read_input.PuzzleInputToDephts()
 	fmt.Printf(">>> Part one solution is: %v\n", solutions.PartOneLinearIncrease(depths))
-	fmt.Printf(">>> Part two solution is: %v\n",solutions.PartTwoSlindingWindowIncrease(depths))
+	fmt.Printf(">>> Part two solution is: %v\n", solutions.PartTwoSlindingWindowIncrease(depths))
 }

@@ -4,7 +4,7 @@ import (
 	"advent_of_code_day_2/read_input"
 )
 
-func calculateVertHorzAimProgress(directions []*read_input.Direction) (horizontalProgress int, verticalProgress int){
+func calculateVertHorzAimProgress(directions []*read_input.Direction) (horizontalProgress int, verticalProgress int) {
 	var aim int
 	for _, direction := range directions {
 		switch direction.Orientation {
@@ -18,11 +18,10 @@ func calculateVertHorzAimProgress(directions []*read_input.Direction) (horizonta
 			verticalProgress += verticalValue
 		}
 	}
-	return 
+	return
 }
 
-
-func PartTwo(directions []*read_input.Direction) (int) {
+func PartTwo(directions []*read_input.Direction) int {
 	horzProgr, vertProgr := calculateVertHorzAimProgress(directions)
 	return horzProgr * vertProgr
 }
