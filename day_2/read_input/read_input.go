@@ -16,14 +16,14 @@ type Direction struct {
 	Value int
 }
 
-func directionsFromString(directionString string) Direction {
+func directionsFromString(directionString string) *Direction {
 	splittedValues := strings.Fields(directionString)
 	
 	value, err := strconv.Atoi(splittedValues[1])
 	if err != nil {
 		log.Fatal(err)
 	}
-	return Direction{
+	return &Direction{
 		Orientation: splittedValues[0],
 		Value: value,
 	}
@@ -39,14 +39,14 @@ func getInputLocation() string{
 }
 
 
-func PuzzleInputToDirections() []Direction {
+func PuzzleInputToDirections() []*Direction {
 	file, err := os.Open(getInputLocation())
 	defer file.Close()
 
 	if err != nil {
 			log.Fatal(err)
 	}
-	directions := make([]Direction, 0, 0)
+	directions := make([]*Direction, 0, 0)
 	scanner := bufio.NewScanner(file)
 	
 	for scanner.Scan() {

@@ -8,6 +8,6 @@ import (
 
 func main() {
 	directions := read_input.PuzzleInputToDirections()
-	fmt.Printf(">>> Part one solution is: %v\n", solutions.PartOne(&directions))
-	// fmt.Printf(">>> Part one solution is: %v\n", solutions.PartOne(directions))
+	fmt.Printf(">>> Part one solution is: %v\n", solutions.PartOne(directions))
+	fmt.Printf(">>> Part two solution is: %v\n", solutions.PartTwo(directions))
 }
