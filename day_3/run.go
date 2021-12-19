@@ -9,5 +9,5 @@ import (
 func main() {
 	binaries := read_input.PuzzleInputToBinary()
 	fmt.Printf(">>> Part one solution is: %v\n", solutions.PartOne(binaries))
-	// fmt.Printf(">>> Part two solution is: %v\n", solutions.PartTwo(directions))
+	fmt.Printf(">>> Part two solution is: %v\n", solutions.PartTwo(binaries))
 }
